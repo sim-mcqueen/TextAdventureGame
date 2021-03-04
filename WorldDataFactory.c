@@ -55,11 +55,16 @@ Room* Room0_Build()
 
 	/* TODO REQUIRED: Call Room_Create with the Room 1 description:
 	"This is room 0. It is a display room with a cage in the middle. You can see a jeweled egg inside the cage.  There is a crack in the west wall, but you can't fit through it from this side.\n" */
-
+	room = Room_Create("You're in a dimly lit cavern, the only light is shining through the hole which you fell through. It's too high to climb back out. You see small writing carved into the floor next to you.\n");
+	
 	/* TODO REQUIRED: Add an Exit "north" to Room 1 */
+	Room_AddRoomExit(room, "north", 1);
+
 	/* TODO BASIC: Add room exit shortcut for "n" */
 
+
 	/* TODO REQUIRED: add an exit door to the list of items in the room, ExitDoor_Build() */
+	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
 
 	/* TODO ADVANCED: (not required) update the description and add a room exit to the "east" */
 
