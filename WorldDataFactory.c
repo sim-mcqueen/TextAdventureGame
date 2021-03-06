@@ -62,11 +62,8 @@ Room* Room0_Build()
 
 	/* TODO BASIC: Add room exit shortcut for "n" */
 
-
 	/* TODO REQUIRED: add an exit door to the list of items in the room, ExitDoor_Build() */
 	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
-
-	/* TODO ADVANCED: (not required) update the description and add a room exit to the "east" */
 
 	/* return the new room */
 	return room;
