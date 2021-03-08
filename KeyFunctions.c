@@ -4,9 +4,8 @@ Date: 3/5/21
 Desc: Adds functions to the key item
 ******************************************/
 
-
+#include "KeyFunctions.h"
 #include "stdafx.h" /* UNREFERENCED_PARAMETER, NULL*/
-#include "KeyFunctions.h" /* Function declarations */
 #include "GameState.h" /* struct GameState, GameState_ChangeScore */
 #include "GameFlags.h" /* GameFlags_IsInList */
 #include "WorldData.h" /* WorldData_GetRoom */
@@ -75,5 +74,5 @@ void Key_Use(CommandContext context, GameState* gameState, WorldData* worldData)
 
 
 Item* KeyBuild() {
-	return Item_Create("Key", "A small key, covered in dust", true, Key_Use, Key_Take, NULL);
+	return Item_Create("key", "A small key, covered in dust", true, Key_Use, Key_Take, NULL);
 }

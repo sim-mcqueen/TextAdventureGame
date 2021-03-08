@@ -3,5 +3,5 @@
 typedef struct Item Item;
 
 
-/* Build a "brick" object */
-Item* Key_Build();
+/* Build a "Key" object */
+Item* KeyBuild();
