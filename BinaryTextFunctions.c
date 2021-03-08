@@ -10,6 +10,7 @@ typedef struct WorldData WorldData;
 
 Item* BinaryText_Build()
 {
-	/* Create a "egg" item, using the functions defined in this file */
-	return Item_Create("carvings", "You can barely make out the digits. \n", false, NULL, NULL, NULL);
+	/* Create a "binary" item */
+	return Item_Create("binary", "You can barely make out the digits. 0010\n", false, NULL, NULL, NULL);
+
 }

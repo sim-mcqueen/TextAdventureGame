@@ -18,6 +18,7 @@ This could be used to create default states as well as loaded state.
 #include "BrickFunctions.h" /* Brick_Build */
 #include "GoldPieceFunctions.h" /* GoldPiece_Build */
 #include "ExitDoorFunctions.h" /* ExitDoor_Build */
+#include "BinaryTextFunctions.h"
 
 
 
@@ -53,17 +54,17 @@ Room* Room0_Build()
 	/* Pre-declare a room pointer which we will use to build the new room */
 	Room* room = NULL;
 
-	/* TODO REQUIRED: Call Room_Create with the Room 1 description:
-	"This is room 0. It is a display room with a cage in the middle. You can see a jeweled egg inside the cage.  There is a crack in the west wall, but you can't fit through it from this side.\n" */
-	room = Room_Create("You're in a dimly lit cavern, the only light is shining through the hole which you fell through. It's too high to climb back out. You see small writing carved into the floor next to you.\n");
+	room = Room_Create("You're in a dimly lit cavern, the only source of light is from through the small hole which you fell through. It's too high to climb back out. You see small writing carved into the floor next to you.\n");
 	
 	/* TODO REQUIRED: Add an Exit "north" to Room 1 */
 	Room_AddRoomExit(room, "north", 1);
 
 	/* TODO BASIC: Add room exit shortcut for "n" */
+	Room_AddRoomExitShortcut(room, "n", 1);
 
 	/* TODO REQUIRED: add an exit door to the list of items in the room, ExitDoor_Build() */
 	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
+	ItemList_AddItem(Room_GetItemList(room), BinaryText_Build());
 
 	/* return the new room */
 	return room;
