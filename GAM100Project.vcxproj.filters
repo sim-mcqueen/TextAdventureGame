@@ -76,7 +76,7 @@
     <ClCompile Include="Source\WorldData.c">
       <Filter>World Data</Filter>
     </ClCompile>
-    <ClCompile Include="BinaryTextFunctions.c">
+    <ClCompile Include="KeyFunctions.c">
       <Filter>World Data\Item Functions</Filter>
     </ClCompile>
   </ItemGroup>
@@ -174,7 +174,7 @@
     <ClInclude Include="Source\WorldDataFactory.h">
       <Filter>World Data</Filter>
     </ClInclude>
-    <ClInclude Include="BinaryTextFunctions.h">
+    <ClInclude Include="KeyFunctions.h">
       <Filter>World Data\Item Functions</Filter>
     </ClInclude>
   </ItemGroup>
