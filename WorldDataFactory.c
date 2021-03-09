@@ -71,26 +71,28 @@ Room* Room0_Build()
 }
 
 
+
 /* TODO REQUIRED: Build room 1 */
 Room* Room1_Build()
 {
 	/* Pre-declare a room pointer which we will use to build the new room */
 	Room* room = NULL;
 
-	/* TODO REQUIRED: Call Room_Create with the Room 1 description:
-	"This is room 1.  There is a large mirror here, and it shimmers as you approach.\n" */
+	/* TODO REQUIRED: Call Room_Create */
+	room = Room_Create("Room 1");
 
-	/* TODO REQUIRED: Add an Exit "through the mirror" to Room 2 */
-	/* TODO BASIC: Add exit shortcuts for "through mirror" and "mirror" */
+	Room_AddRoomExit(room, "north", 2);
+	Room_AddRoomExitShortcut(room, "n", 2);
 
-	/* TODO REQUIRED: Add an Exit "south" back to Room 0 */
-	/* TODO BASIC: Add room exit shortcut for "s" */
+	Room_AddRoomExit(room, "west", 4);
+	Room_AddRoomExitShortcut(room, "w", 4);
 
-	/* TODO REQUIRED: Add a brick to the list of items in the room */
+	Room_AddRoomExit(room, "south", 0);
+	Room_AddRoomExitShortcut(room, "s", 0);
 
-	/* return the new room */
 	return room;
 }
+
 
 
 /* TODO REQUIRED: Build room 2 */
@@ -99,21 +101,81 @@ Room* Room2_Build()
 	/* TODO: Pre-declare a room pointer which we will use to build the new room */
 	Room* room = NULL;
 
-	/* TODO REQUIRED: Call Room_Create with the Room 2 description:
-	"This is room 2.  The room is isolated from the others, but you can see a crack in the east wall, just large enough to get through.\n" */
+	room = Room_Create("Room 2");
 
-	/* TODO REQUIRED: Add an Exit "east" to Room 0 */
-	/* TODO BASIC: Add exit shortcuts for "e" and "crack" */
+	Room_AddRoomExit(room, "west", 3);
+	Room_AddRoomExitShortcut(room, "w", 3);
 
-	/* TODO REQUIRED: Add a gold piece to the list of items in the room */
+	Room_AddRoomExit(room, "south", 1);
+	Room_AddRoomExitShortcut(room, "s", 1);
 
-	/* return the new room */
 	return room;
 }
 
 
-/* TODO ADVANCED: Build room 3 */
-/* TODO ADVANCED: Build room 4 */
+Room* Room3_Build()
+{
+	Room* room = NULL;
+	room = Room_Create("Room ");
+
+	Room_AddRoomExit(room, "east", 3);
+	Room_AddRoomExitShortcut(room, "e", 2);
+
+	return room;
+}
+
+Room* Room4_Build()
+{
+	Room* room = NULL;
+	room = Room_Create("Room 4");
+
+	Room_AddRoomExit(room, "east", 1);
+	Room_AddRoomExitShortcut(room, "e", 1);
+
+	Room_AddRoomExit(room, "south", 5);
+	Room_AddRoomExitShortcut(room, "s", 5);
+
+	Room_AddRoomExit(room, "west", 6);
+	Room_AddRoomExitShortcut(room, "w", 6);
+
+	return room;
+}
+
+Room* Room5_Build()
+{
+	Room* room = NULL;
+	room = Room_Create("Room 5");
+
+	Room_AddRoomExit(room, "north", 4);
+	Room_AddRoomExitShortcut(room, "n", 4);
+
+	return room;
+}
+
+Room* Room6_Build()
+{
+	Room* room = NULL;
+	room = Room_Create("Room 6");
+
+	Room_AddRoomExit(room, "east", 4);
+	Room_AddRoomExitShortcut(room, "e", 4);
+
+	Room_AddRoomExit(room, "north", 7);
+	Room_AddRoomExitShortcut(room, "n", 7);
+
+	return room;
+}
+
+Room* Room7_Build()
+{
+	Room* room = NULL;
+	room = Room_Create("Room 7");
+
+	Room_AddRoomExit(room, "south", 6);
+	Room_AddRoomExitShortcut(room, "s", 6);
+
+	return room;
+}
 
 
 /* ------------------------------------------------------- */
