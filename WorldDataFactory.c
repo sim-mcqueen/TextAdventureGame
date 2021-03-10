@@ -64,7 +64,6 @@ Room* Room0_Build()
 
 	/* TODO REQUIRED: add an exit door to the list of items in the room, ExitDoor_Build() */
 	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
-	ItemList_AddItem(Room_GetItemList(room), BinaryText_Build());
 
 	/* return the new room */
 	return room;
@@ -79,7 +78,7 @@ Room* Room1_Build()
 	Room* room = NULL;
 
 	/* TODO REQUIRED: Call Room_Create */
-	room = Room_Create("Room 1");
+	room = Room_Create("Room 1\n");
 
 	Room_AddRoomExit(room, "north", 2);
 	Room_AddRoomExitShortcut(room, "n", 2);
@@ -101,7 +100,7 @@ Room* Room2_Build()
 	/* TODO: Pre-declare a room pointer which we will use to build the new room */
 	Room* room = NULL;
 
-	room = Room_Create("Room 2");
+	room = Room_Create("Room 2\n");
 
 	Room_AddRoomExit(room, "west", 3);
 	Room_AddRoomExitShortcut(room, "w", 3);
@@ -116,9 +115,9 @@ Room* Room2_Build()
 Room* Room3_Build()
 {
 	Room* room = NULL;
-	room = Room_Create("Room ");
+	room = Room_Create("Room 3\n");
 
-	Room_AddRoomExit(room, "east", 3);
+	Room_AddRoomExit(room, "east", 2);
 	Room_AddRoomExitShortcut(room, "e", 2);
 
 	return room;
@@ -127,7 +126,7 @@ Room* Room3_Build()
 Room* Room4_Build()
 {
 	Room* room = NULL;
-	room = Room_Create("Room 4");
+	room = Room_Create("Room 4\n");
 
 	Room_AddRoomExit(room, "east", 1);
 	Room_AddRoomExitShortcut(room, "e", 1);
@@ -144,7 +143,7 @@ Room* Room4_Build()
 Room* Room5_Build()
 {
 	Room* room = NULL;
-	room = Room_Create("Room 5");
+	room = Room_Create("Room 5\n");
 
 	Room_AddRoomExit(room, "north", 4);
 	Room_AddRoomExitShortcut(room, "n", 4);
@@ -155,7 +154,7 @@ Room* Room5_Build()
 Room* Room6_Build()
 {
 	Room* room = NULL;
-	room = Room_Create("Room 6");
+	room = Room_Create("Room 6\n");
 
 	Room_AddRoomExit(room, "east", 4);
 	Room_AddRoomExitShortcut(room, "e", 4);
@@ -169,7 +168,7 @@ Room* Room6_Build()
 Room* Room7_Build()
 {
 	Room* room = NULL;
-	room = Room_Create("Room 7");
+	room = Room_Create("Room 7\n");
 
 	Room_AddRoomExit(room, "south", 6);
 	Room_AddRoomExitShortcut(room, "s", 6);
