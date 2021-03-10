@@ -18,7 +18,7 @@ This could be used to create default states as well as loaded state.
 #include "BrickFunctions.h" /* Brick_Build */
 #include "GoldPieceFunctions.h" /* GoldPiece_Build */
 #include "ExitDoorFunctions.h" /* ExitDoor_Build */
-#include "BinaryTextFunctions.h"
+#include "SwordFunctions.h"
 
 
 
@@ -64,6 +64,8 @@ Room* Room0_Build()
 
 	/* TODO REQUIRED: add an exit door to the list of items in the room, ExitDoor_Build() */
 	ItemList_AddItem(Room_GetItemList(room), ExitDoor_Build());
+
+	ItemList_AddItem(Room_GetItemList(room), Sword_Build());
 
 	/* return the new room */
 	return room;
